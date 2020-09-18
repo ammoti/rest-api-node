@@ -6,7 +6,6 @@ import User from "../users/user.model";
 
 export default class AuthController {
   public authenticate = async (req: Request, res: Response): Promise<any> => {
-    console.log("req",req.body);
     const { email, password } = req.body;
     try {
       const user = await User.findOne({
